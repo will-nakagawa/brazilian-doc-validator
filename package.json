@@ -1,0 +1,38 @@
+{
+  "name": "brazilian-validator",
+  "version": "1.0.0",
+  "description": "Validator for common brazilian patterns, such as cpf and cnpj validations. It is a npm package to be used in javascript applications",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc -b && node ./dist/index.js",
+    "build": "tsc -b",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/will-nakagawa/brazilian-validator.git"
+  },
+  "keywords": [
+    "cpf",
+    "cnpj",
+    "validator",
+    "mask"
+  ],
+  "author": "William Nakagawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/will-nakagawa/brazilian-validator/issues"
+  },
+  "homepage": "https://github.com/will-nakagawa/brazilian-validator#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.7"
+  },
+  "jest": {
+    "verbose": true,
+    "testPathIgnorePatterns": ["src/*", "dist/*"],
+    "coverageDirectory": "coverage"
+  }
+}
