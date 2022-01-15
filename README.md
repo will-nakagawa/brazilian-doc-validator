@@ -62,3 +62,17 @@ const newCpfOnlyNumbers = cpf.generate(false);
 ```
 
 > **Result:**  ###########
+
+## CPF
+
+In progress
+
+# Contributing
+
+To do
+
+# Testing
+
+```bash
+npm run test
+```
