@@ -1,4 +1,4 @@
-# brazilian-validator
+# brazilian-doc-validator
 Validator for common brazilian patterns, such as cpf and cnpj validations. 
 Generator and mask/unmask CPF or CNPJ document numbers.
 It is a npm package to be used in javascript applications.
@@ -8,13 +8,13 @@ It is a npm package to be used in javascript applications.
 Using npm:
 
 ```bash
-npm install brazilian-validator
+npm i brazilian-doc-validator
 ```
 
 Using yarn:
 
 ```bash
-yarn add brazilian-validator
+yarn add brazilian-doc-validator
 ```
 
 # Usage
@@ -22,7 +22,13 @@ yarn add brazilian-validator
 ## CPF
 
 ```js
-import {cpf} from 'brazilian-validator';
+import {cpf} from 'brazilian-doc-validator';
+```
+
+or
+
+```js
+const {cpf} = require('brazilian-doc-validator');
 ```
 
 ### Validation
@@ -68,7 +74,11 @@ const newCpfOnlyNumbers = cpf.generate({mask: false});
 ## CNPJ
 
 ```js
-import {cnpj} from 'brazilian-validator';
+import {cnpj} from 'brazilian-doc-validator';
+```
+
+```js
+const {cnpj} = require('brazilian-doc-validator');
 ```
 
 ### Validation
