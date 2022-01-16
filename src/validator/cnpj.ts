@@ -133,8 +133,7 @@ const cnpjUnmask = (cnpj: string): string => {
     
         for (let i = numbersList.length - 1; i >= 0; i--) {
             sumDigit += numbersList[i] * salt--
-            if (salt < 2)
-                salt = 9
+            if (salt < 2) salt = 9
         }
     
         return sumDigit

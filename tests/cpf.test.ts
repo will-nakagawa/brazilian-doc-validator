@@ -71,13 +71,13 @@ describe("CPF Unmask test", () => {
 
 describe("CPF Generator test", () => {
     it('Correct check if generated CPF is valid and unmasked', () => {
-        const cpfGenerated = cpf.generate(false);
+        const cpfGenerated = cpf.generate({mask: true});
         const isValid = cpf.validate(cpfGenerated);
         expect(isValid).toBeTruthy();
     });
 
     it('Correct check if generated CPF is valid and masked', () => {
-        const cpfGenerated = cpf.generate(true);
+        const cpfGenerated = cpf.generate({mask: false});
         const isValid = cpf.validate(cpfGenerated);
         expect(isValid).toBeTruthy();
     });
