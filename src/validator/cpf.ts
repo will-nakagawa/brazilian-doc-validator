@@ -76,7 +76,7 @@ const cpfRemoveMask = (cpf: string):string => {
     return "";
 };
 
-const cpfGenerate = (options: Record<string, any> = {mask: true}):string => {
+const cpfGenerate = (options: Record<string, any> = {mask: true}): string => {
 
     const {mask} = options;
 
@@ -85,17 +85,25 @@ const cpfGenerate = (options: Record<string, any> = {mask: true}):string => {
     let mod = (dividendo:number, divisor:number):number => Math.round(dividendo - (Math.floor(dividendo / divisor) * divisor));
 
     let array:number[] = create_array(9, 9);
-    
-    let d1:number = array[8] * 2 + array[7] * 3 + array[6] * 4 + array[5] * 5 + array[4] * 6 + array[3] * 7 + array[2] * 8 + array[1] * 9 + array[0] * 10;
+
+    const formulaReducer = (number:number, array: number[]): number => {
+        return array.reduce( ( prevVal, elem, index ) => {
+            return prevVal + elem * (number - index);
+        }, 0)
+    }
+
+    let d1:number = formulaReducer(10, array);
 
     d1 = 11 - (mod(d1, 11));
     if (d1 >= 10) d1 = 0;
+        
+    let d2:number = (d1 * 2) + formulaReducer(11, array);
     
-    let d2 = d1 * 2 + array[8] * 3 + array[7] * 4 + array[6] * 5 + array[5] * 6 + array[4] * 7 + array[3] * 8 + array[2] * 9 + array[1] * 10 + array[0] * 11;
     d2 = 11 - (mod(d2, 11));
+    
     if (d2 >= 10) d2 = 0;
     
-    const newCpf = `${array.join('')}${d1}${d2}`;
+    const newCpf: string = `${array.join('')}${d1}${d2}`;
 
     return (mask) ? cpfAddMask(newCpf) : newCpf ;
 }
