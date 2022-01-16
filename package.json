@@ -1,5 +1,5 @@
 {
-  "name": "brazilian-validator",
+  "name": "@williamnakagawa/brazilian-validator",
   "version": "1.0.0",
   "description": "Validator for common brazilian patterns, such as cpf and cnpj validations. It is a npm package to be used in javascript applications",
   "main": "index.js",
@@ -32,7 +32,13 @@
   },
   "jest": {
     "verbose": true,
-    "testPathIgnorePatterns": ["src/*", "dist/*"],
+    "testPathIgnorePatterns": [
+      "src/*",
+      "dist/*"
+    ],
     "coverageDirectory": "coverage"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
