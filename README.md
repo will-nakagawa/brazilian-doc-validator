@@ -1,5 +1,7 @@
 # brazilian-validator
-Validator for common brazilian patterns, such as cpf and cnpj validations. It is a npm package to be used in javascript applications
+Validator for common brazilian patterns, such as cpf and cnpj validations. 
+Generator and mask/unmask CPF or CNPJ document numbers.
+It is a npm package to be used in javascript applications.
 
 # Installling
 
@@ -63,9 +65,51 @@ const newCpfOnlyNumbers = cpf.generate(false);
 
 > **Result:**  ###########
 
-## CPF
+## CNPJ
 
-In progress
+```js
+import {cnpj} from 'brazilian-validator';
+```
+
+### Validation
+
+```js
+cnpj.validate(11.111.111/1111-11);
+```
+
+> **Result:** false
+
+### Mask Formated
+
+```js
+const validCnpj = "##############";
+cnpj.mask(validCnpj)
+```
+
+> **Result:**  ##.###.###/####-##
+
+### Unmask CNPJ (only numbers)
+
+```js
+const validCnpj = "##.###.###/####-##";
+cnpj.unmask(validCnpj)
+```
+
+> **Result:**  ##############
+
+### Generate Valid CNPJ
+
+```js
+const newMaskedCnpj = cnpj.generate({mask: true});
+```
+
+> **Result:**  ##.###.###/####-##
+
+```js
+const newCnpj = cnpj.generate({mask: false};
+```
+
+> **Result:**  ##############
 
 # Contributing
 
