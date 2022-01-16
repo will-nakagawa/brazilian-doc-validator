@@ -77,6 +77,8 @@ const newCpfOnlyNumbers = cpf.generate({mask: false});
 import {cnpj} from 'brazilian-doc-validator';
 ```
 
+or
+
 ```js
 const {cnpj} = require('brazilian-doc-validator');
 ```
