@@ -1,6 +1,6 @@
 {
   "name": "brazilian-doc-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validator for common brazilian patterns, such as cpf and cnpj validations. It is a npm package to be used in javascript applications",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/will-nakagawa/brazilian-validator.git"
+    "url": "git+https://github.com/will-nakagawa/brazilian-doc-validator.git"
   },
   "keywords": [
     "cpf",
@@ -21,9 +21,9 @@
   "author": "William Nakagawa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/will-nakagawa/brazilian-validator/issues"
+    "url": "https://github.com/will-nakagawa/brazilian-doc-validator/issues"
   },
-  "homepage": "https://github.com/will-nakagawa/brazilian-validator#readme",
+  "homepage": "https://github.com/will-nakagawa/brazilian-doc-validator#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.16.8",
     "@babel/preset-typescript": "^7.16.7",
