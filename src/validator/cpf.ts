@@ -76,7 +76,9 @@ const cpfRemoveMask = (cpf: string):string => {
     return "";
 };
 
-const cpfGenerate = (isMasked: boolean):string => {
+const cpfGenerate = (options: Record<string, any> = {mask: true}):string => {
+
+    const {mask} = options;
 
     let create_array = (total:number, numero:number): number[] => Array.from(Array(total), () => number_random(numero));
     let number_random = (number:number) => (Math.round(Math.random() * number));
@@ -93,10 +95,9 @@ const cpfGenerate = (isMasked: boolean):string => {
     d2 = 11 - (mod(d2, 11));
     if (d2 >= 10) d2 = 0;
     
-    if (!Boolean(isMasked))
-        return `${array[0]}${array[1]}${array[2]}.${array[3]}${array[4]}${array[5]}.${array[6]}${array[7]}${array[8]}-${d1}${d2}`;
-    else
-        return `${array[0]}${array[1]}${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}${array[7]}${array[8]}${d1}${d2}`;
+    const newCpf = `${array.join('')}${d1}${d2}`;
+
+    return (mask) ? cpfAddMask(newCpf) : newCpf ;
 }
 
 export default { validate: cpfValidation, mask: cpfAddMask, unmask: cpfRemoveMask, generate: cpfGenerate };

@@ -47,8 +47,8 @@ describe("CNPJ Mask Test", () => {
 
 describe("CNPJ Unmask Test", () => {
     it("Should have a correct unmask on a valid cnpj or return empty string", () => {
-        const newCnpj = cnpj.unmask(validCnpjUnmasked);
-        expect(newCnpj).toBe(validCnpjMasked);
+        const newCnpj = cnpj.unmask(validCnpjMasked);
+        expect(newCnpj).toBe(validCnpjUnmasked);
     });
 
     it("Should return empty string on invalid CNPJ", () => {
