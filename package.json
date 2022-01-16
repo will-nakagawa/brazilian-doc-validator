@@ -1,6 +1,6 @@
 {
   "name": "brazilian-validator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Validator for common brazilian patterns, such as cpf and cnpj validations. It is a npm package to be used in javascript applications",
   "main": "index.js",
   "scripts": {
