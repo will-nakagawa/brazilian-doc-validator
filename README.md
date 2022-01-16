@@ -54,13 +54,13 @@ cpf.unmask(validCpf)
 ### Generate Valid CPF
 
 ```js
-const newCpfMasked = cpf.generate(true);
+const newCpfMasked = cpf.generate({mask: true});
 ```
 
 > **Result:**  ###.###.###-##
 
 ```js
-const newCpfOnlyNumbers = cpf.generate(false);
+const newCpfOnlyNumbers = cpf.generate({mask: false});
 ```
 
 > **Result:**  ###########
