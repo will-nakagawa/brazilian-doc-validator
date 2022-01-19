@@ -3,7 +3,18 @@ Validator for common brazilian patterns, such as cpf and cnpj validations.
 Generator and mask/unmask CPF or CNPJ document numbers.
 It is a npm package to be used in javascript applications.
 
-# Installling
+# Table of contents
+
+<!--ts-->
+* [Installing](#installing)
+* [Usage](#usage)
+    * [CPF](#cpf)
+    * [CNPJ](#cnpj)
+* [Contributing](#contributing)
+* [Testing](#testing)
+<!--te-->
+
+# Installing
 
 Using npm:
 
