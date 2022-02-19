@@ -45,7 +45,7 @@ const {cpf} = require('brazilian-doc-validator');
 ### Validation
 
 ```js
-cpf.validate(111.111.111-11);
+cpf.validate("111.111.111-11");
 ```
 
 > **Result:** false
@@ -97,7 +97,7 @@ const {cnpj} = require('brazilian-doc-validator');
 ### Validation
 
 ```js
-cnpj.validate(11.111.111/1111-11);
+cnpj.validate("11.111.111/1111-11");
 ```
 
 > **Result:** false
