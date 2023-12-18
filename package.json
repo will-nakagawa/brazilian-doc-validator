@@ -1,9 +1,10 @@
 {
   "name": "brazilian-doc-validator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Validator for common brazilian patterns, such as cpf and cnpj validations. It is a npm package to be used in javascript applications",
   "main": "index.js",
   "scripts": {
+    "prepare": "npm run build",
     "start": "tsc -b && node ./dist/index.js",
     "build": "tsc -b",
     "eslint": "eslint src/**/*.ts tests/**/*.ts",
